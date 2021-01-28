@@ -1,0 +1,41 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+*/*.csv
+
+# Config
+.env
+*/.env
+
+# Distribution / packaging
+.Python
+/venv/
+/build/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Sphinx documentation
+docs/_build/
+
+# App logs
+*.log
+
+# Project specific ignores
+*.swp
+*.bak
+local_config.py
+static/
+example.db
+.idea/
+clients/*/swagger.json
+clients/*/dist
+
