@@ -36,9 +36,10 @@ class Library:
         :param sort: use one of sort key 'name, author, year - default'
         :return: sorted list
         """
-        for book in sorted(self.__books, key=lambda book: book.__getattribute__(sort)):
+        books = sorted(self.__books, key=lambda book: book.__getattribute__(sort))
+        for book in books:
             print(book)
-        return self.__books
+        return books
 
     def get_available_books(self, sort: str = 'year') -> list:
         """
