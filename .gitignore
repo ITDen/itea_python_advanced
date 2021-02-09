@@ -11,6 +11,9 @@ __pycache__/
 .env
 */.env
 
+# class_works works
+class_works/
+
 # Distribution / packaging
 .Python
 /venv/
