@@ -1,6 +1,6 @@
 import threading
 import socket
-from home_works.lesson_6.messages import SocketMessage
+from home_works.lesson_6.utils.messages import SocketMessage
 from home_works.lesson_6._library.library import Library
 
 

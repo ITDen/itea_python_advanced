@@ -1,8 +1,10 @@
-from home_works.lesson_6.server import SocketServer
+from home_works.lesson_6.utils.server import SocketServer
 from home_works.lesson_6._library.library import Library
 from home_works.lesson_6._library.book import Book
 
-
+'''
+Сервер и библиотека запускаются из main файла, клиент из файла client
+'''
 if __name__ == '__main__':
     # Read all books and make books obj list
     with open('_library/books.txt', 'r') as f:
