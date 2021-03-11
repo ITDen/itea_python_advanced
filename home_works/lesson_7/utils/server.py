@@ -29,16 +29,16 @@ class SocketServer(Thread):
                                       f'Please, choose options:\n{self.__terminal_options}')
             requested_option = self.__message.receive(conn)
             while True:
-                    if requested_option == 'close':
-                        self.__message.send(conn, 'Bye!')
-                        print(f'Host: {addr} has been disconnected!')
-                        break
-                    if requested_option in self.__available_commands:
-                        request = self.__available_commands[requested_option]()
-                        self.__message.send(conn, str(request))
-                    else:
-                        self.__message.send(conn, f'Wrong option! Should choose one from:\n{self.__terminal_options}')
-                    requested_option = self.__message.receive(conn)
+                if requested_option == 'close':
+                    self.__message.send(conn, 'Bye!')
+                    print(f'Host: {addr} has been disconnected!')
+                    break
+                if requested_option in self.__available_commands:
+                    request = self.__available_commands[requested_option]()
+                    self.__message.send(conn, str(request))
+                else:
+                    self.__message.send(conn, f'Wrong option! Should choose one from:\n{self.__terminal_options}')
+                requested_option = self.__message.receive(conn)
         except ConnectionError:
             print(f'Connection was interrupted unexpectedly!')
 
